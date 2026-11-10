@@ -1,16 +1,60 @@
-﻿# Spring Boot database credentials
+# ============================================================
+# SheFlow — .gitignore
+# ============================================================
+
+# ----- Secrets & Environment Variables ----------------------
+# application.properties contains DB passwords and JWT secrets.
+# Never commit these. Configure via environment variables or a local
+# application.properties copied from application.properties.example.
 **/application.properties
 **/application.yml
-
-# Environment variables
+**/application-local.properties
+**/application-local.yml
 .env
 .env.*
+!.env.example
 
-# Build files
+# ----- Java / Maven Build Output ----------------------------
 target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Maven wrapper downloads
+.mvn/repository/
+
+# ----- Node / npm / Vite -----------------------------------
 node_modules/
 dist/
+build/
+.vite/
+*.local
 
-# IDE files
+# ----- IDE & Editor Files ----------------------------------
 .idea/
+*.iml
+*.ipr
+*.iws
 .vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----- Logs & Reports ---------------------------------------
+*.log
+logs/
+*.heapdump
+
+# ----- OS Files ---------------------------------------------
+.DS_Store
+ehthumbs.db
+Desktop.ini
+
+# ----- Temporary / Testing Artifacts ------------------------
+*.tmp
+*.bak
+*.orig
